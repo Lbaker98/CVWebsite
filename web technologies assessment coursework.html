@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA- Compatible" content="ie = edge">
+
+    <title> Home Page </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"> <!-- to connect to the google font repository  -->
+    <link rel = "stylesheet" href="../csc-20021 website/css/home css.css"/> <!-- calling home page ccs-->
+</head>
+
+<body>
+    <nav>
+        <div class="logos">
+            <img src= "../csc-20021 website/imgs/logo.png" alt = "Keele logo"> <!-- importing Logo  -->
+        </div>
+            <ul class = "nav-links"> <!-- defining navigation bar  -->
+            <li> <a href="web technologies assessment coursework.html">Home</a> </li>
+            <li><a href="Login.html">Log in </a></li>
+            <li><a href="repository.html">Full repository</a></li>
+            <li><a href="cv.html">My CV</a></li>  
+            </ul>
+
+            <div class = "burger">
+                <div class = "line1"></div>
+                <div class = "line2"></div>
+                <div class = "line3"></div>
+            </div>
+    </nav>
+    
+    <div class= "header">
+        <h1>Scientific Repository of Natural Science </h1>
+    </div>
+
+    <h2>Home page </h2>
+    <div class="btn-group">    
+        <button id= "b1" onclick="window.location.href = 'Login.html';">Log In</button> <!-- button to traverse to log in page  -->
+        <button id= "b2" onclick="window.location.href = 'repository.html';">View all entries</button> <!-- button to traverse to repository page  -->
+    </div>
+
+    <h3>Calculator</h3>
+    <div class="container">
+        <div class= "calc"> <!-- initiating calculator  -->
+
+            <input type=number id="v1">
+            <span id="op">+</span>
+            <input type=number id="v2"> 
+            &nbsp;=&nbsp;
+            <span id="res"> </span>
+            <input type="number" id = "output">
+            
+            <div class = "clcbtns">
+                <button id="plus" >+</button>
+                <button id="minus">-</button>
+                <button id="times">&times;</button>
+                <button id="divide">&divide;</button>
+
+                <button id = "bSize"> Big </button>
+                <button id = "sSize"> Reg </button>
+
+            </div>
+
+            <script type="text/javascript">
+
+            var result = null;
+            var bigorsml = false;
+
+            function add() //addbutton arithmetic
+            {
+                alert('here');
+                var fig1 = document.getElementById("v1").value;
+                var fig2 = document.getElementById("v2").value;
+                result = (fig1.value + fig2.value);
+                document.getElementById("output").value = result;
+                
+            }
+
+            function sub()//subtaction button arithmetic
+            {
+                alert('here');
+                var fig1 = document.getElementById("v1").value;
+                var fig2 = document.getElementById("v2").value;
+                result = fig1 - fig2;
+                document.getElementById("output").value = result;
+            }
+            function multi() //multiplication arithmetic
+            {
+                alert('here');
+                var fig1 = document.getElementById("v1").value;
+                var fig2 = document.getElementById("v2").value;
+                result = fig1 * fig2;
+                document.getElementById("output").value = result;
+            }
+            function divi() //division arithmetic
+            {
+                alert('here');
+                var fig1 = document.getElementById("v1").value;
+                var fig2 = document.getElementById("v2").value;
+                
+                result = fig1 / fig2;
+                fig1 = result;
+                document.getElementById("output").value = result;
+            }
+            function bigbtn() //changing button size to big
+            {
+                document.getElementById("plus").style.fontSize = "40px";
+                document.getElementById("minus").style.fontSize = "40px";
+                document.getElementById("times").style.fontSize = "40px";
+                document.getElementById("divde").style.fontSize = "40px";
+                localStorage.setItem(bigorsml == true) //setting a boolean value to keep track of button state in local storage 
+            }
+            function smlbtn() //changing button to small 
+            {
+                document.getElementById("plus").style.fontSize = "20px";
+                document.getElementById("minus").style.fontSize = "20px";
+                document.getElementById("times").style.fontSize = "20px";
+                document.getElementById("divde").style.fontSize = "20px";
+                localStorage.setItem(bigorsml == false) //setting a boolean value to keep track of button state in local storage
+            }
+            //event listneners for all of my buttons
+            document.getElementById("plus").addEventListener("click", add);
+            document.getElementById("minus").addEventListener("click", sub);
+            document.getElementById("times").addEventListener("click", multi);
+            document.getElementById("divide").addEventListener("click", divi);
+
+            document.getElementById("bSize").addEventListener("click", bigbtn);
+            document.getElementById("sSize").addEventListener("click", smlbtn);
+
+            </script>
+        </div>
+    </div>
+</body>
+</html>
