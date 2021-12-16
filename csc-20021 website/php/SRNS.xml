@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<rss version ="2.0">
+<chanel>
+    <repository>
+        <publications>
+            <DOI>01</DOI>
+            <Title>Booktest</Title>
+            <Author>Authors</Author>
+            <Publisher>Publisher</Publisher>
+            <Pubyr>09/01/1998</Pubyr>
+            <School>blackhurst</School>
+            <Schoolcode>2647</Schoolcode>
+        </publications>
+        
+        <publications>
+            <DOI>02</DOI>
+            <Title>Booktest2</Title>
+            <Author>Authors2</Author>
+            <Publisher>Publisher2</Publisher>
+            <Pubyr>09/01/1997</Pubyr>
+            <School>Blackmeed</School>
+            <Schoolcode>2649</Schoolcode>
+        </publications>
+    </repository>
+</chanel>
+</rss>
