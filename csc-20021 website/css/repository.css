@@ -1,0 +1,117 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+} /* removes any standard stryling*/
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    max-height: 14vh;
+    background-color: #4d7e85;
+    font-family: 'Roboto Slab', serif;
+} /*overall naviagtion stypling*/
+.nav-links
+{
+    display: flex;
+    justify-content: space-around;
+    align-self: auto;
+    width: 40%;
+    background-color: #4d7e85;
+}  /* styling on the drop down*/
+.nav-links a
+{
+    color: rgb(253, 253, 253);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 16px;
+} /* styling on the a tags within the nav bar*/
+.nav-links li
+{
+    list-style: none;
+}
+.logos{
+    color:rgb(253, 253, 253);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+} /* this was just a place holder for my logo image*/
+
+.logos img {
+    height: 150px;
+    margin: 20px auto;
+    
+  }/* the actual image styling */
+.burger div
+{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(253, 253, 253);
+    margin: 5px;
+    
+} /* smaller screen nav placeholder*/
+@media screen and (max-width: 1024px){
+    .nav-links
+{  
+    width: 55%;  
+} /*setting what the nav looks like in full screen*/
+    }
+@media screen and (max-width: 768px)
+{ /* Setting what the navigation looks like when on a mobile or smaller screen to keep possitioning anf ide squashed nav links*/
+    body{
+        overflow-x: hidden;
+        cursor: pointer;
+    }
+    .nav-links
+    {
+        position: absolute;
+        top: 8vh;
+        right: 1px;
+        height: 92vh;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #4d7e85;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+    .nav-links li
+    {
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+
+    }
+    .nav-active
+    {
+        transform: translateX(0%);
+    }
+}
+
+/* General body styling to keep everything following the same font */
+body{ background-image: url(../imgs/birds.jpg);background-repeat:no-repeat;background-size: cover; font-family: 'Roboto Slab', serif;}
+head {font-style: normal; font-family: 'Roboto Slab', serif;}
+
+th, td {
+    padding: 15px;
+  }
+  table, th, td 
+  {
+    border-spacing: 5px;
+    border-style: double;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+table /*Table possitioning*/
+{
+    margin-left: 26%;
+    margin-top: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: relative;
+}
