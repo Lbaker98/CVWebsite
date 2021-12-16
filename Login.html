@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA- Compatible" content="ie = edge">
+
+    <title> Log in </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet"><!-- conecting to google fonts-->
+    <link rel = "stylesheet" href="../csc-20021 website/css/Log in.css"/> <!-- calling login page ccs-->
+</head>
+
+<body>
+    <nav>
+        <div class="logos">
+            <img src= "../csc-20021 website/imgs/logo.png" alt = "Keele logo"> <!-- importing Logo  -->
+        </div>
+            <ul class = "nav-links">
+            <li> <a href="web technologies assessment coursework.html">Home</a> </li>
+            <li><a href="Login.html">Log in </a></li>
+            <li><a href="repository.html">Full repository</a></li>
+            <li><a href="cv.html">My CV</a></li>  
+            </ul>
+
+            <div class = "burger"> <!-- nav placeholder for mobile or smaller screen  -->
+                <div class = "line1"></div>
+                <div class = "line2"></div>
+                <div class = "line3"></div>
+            </div>
+    </nav>
+
+<h1> Please enter credentials below </h1>
+<div class="farb">
+    <div class="clsb">
+        <form id="logform" action = "../csc-20021 website/php/Login.php" method = "POST"> <!-- passing infor in post from form to login php  -->
+        <p1> Username: <input type="text" name = "username" placeholder = "User Name"></p1> <!-- gathering username value from form  -->
+        <p2> Password: <input type="password" name = "password" placeholder="Password"></p2><!-- gathering password value from form  -->
+        <input type = "submit" id= "subbtn" name = "Loginbtn">
+        </form>
+    </div>
+</div>
+</body>
